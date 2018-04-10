@@ -9,6 +9,35 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.css"> 
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <a class="navbar-brand" href="index.html">Latitude</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                          <a class="nav-link" href="comparison.html">Comparison <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                          <a class="nav-link" href="data.html">Data </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                          <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 42px, 0px); top: 0px; left: 0px; will-change: transform;">
+                            <a class="dropdown-item" href="visualization_temp.html">Max Temperature</a>
+                              <a class="dropdown-item" href="visualization_humidity.html">Humidity</a>
+                              <a class="dropdown-item" href="visualization_cloudiness.html">Cloudiness</a>
+                              <a class="dropdown-item" href="visualization_windspeed.html">Wind Speed</a>
+                          </div>
+                        </li>
+                </ul>
+              </div>
+            </nav>
      <div class="row">
         <div class="jumbotron col-sm-6 col-md-6" style="margin:0 auto;margin-top:5rem">
             <h3>Latitude vs.Humidity </h3>
@@ -26,12 +55,12 @@
       
                   <div class="card border-light mb-3 col-md-6" style="max-width: 20rem;">
                     <div class="card-header">Latitude vs. Max Temperature</div>
-                    <img style="height: 200px; width: 100%; display: block;" src="max_temp.png" alt="Max Temperature vs. latitude">
+                    <a href="visualization_temp.html"><img style="height: 200px; width: 100%; display: block;" src="max_temp.png" alt="Max Temperature vs. latitude"></a>
                   </div>
             
                   <div class="card border-success mb-3 col-md-6" style="max-width: 20rem;">
                     <div class="card-header">Latitude vs. Humidity</div>
-                    <img style="height: 200px; width: 100%; display: block;" src="Humidity.png" alt="Humidity vs. latitude">   
+                    <a href="visualization_humidity.html"><img style="height: 200px; width: 100%; display: block;" src="Humidity.png" alt="Humidity vs. latitude"></a>  
                   </div>
             
                 </div>
@@ -40,12 +69,12 @@
             
                   <div class="card border-light mb-3 col-md-6" style="max-width: 20rem;">
                       <div class="card-header">Latitude vs. Cloudiness</div>
-                      <img style="height: 200px; width: 100%; display: block;" src="Cloudiness.png" alt="Cloudiness vs. latitude">          
+                      <a href="visualization_cloudiness.html"><img style="height: 200px; width: 100%; display: block;" src="Cloudiness.png" alt="Cloudiness vs. latitude"></a>     
                   </div>
             
                   <div class="card border-light mb-3 col-md-6" style="max-width: 20rem;">
                         <div class="card-header">Latitude vs. Wind Speed</div>
-                        <img style="height: 200px; width: 100%; display: block;" src="wind_speed.png" alt="Wind Speed vs. latitude">            
+                        <a href="visualization_windspeed.html"><img style="height: 200px; width: 100%; display: block;" src="wind_speed.png" alt="Wind Speed vs. latitude"></a>     
                   </div>
             
                 </div>

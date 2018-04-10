@@ -9,85 +9,83 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.css"> 
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Latitude</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-              
-        <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="comparison.html">Comparison <span class="sr-only">(current)</span></a>
+            <a class="navbar-brand" href="index.html">Latitude</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarColor02">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                        <a class="nav-link" href="comparison.html">Comparison <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="data.html">Data </a>
+                        <a class="nav-link" href="data.html">Data </a>
                 </li>
-                <li class="nav-item dropdown show">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Plots</a>
-                    <div class="dropdown-menu show" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 42px, 0px); top: 0px; left: 0px; will-change: transform;">
-                      <a class="dropdown-item" href="visualization_temp.html">Max Temperature</a>
-                      <a class="dropdown-item" href="visualization_humidity.html">Humidity</a>
-                      <a class="dropdown-item" href="visualization_cloudiness.html">Cloudiness</a>
-                      <a class="dropdown-item" href="visualization_windspeed.html">Wind Speed</a>
-                    </div>
-                  </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 42px, 0px); top: 0px; left: 0px; will-change: transform;">
+                          <a class="dropdown-item" href="visualization_temp.html">Max Temperature</a>
+                            <a class="dropdown-item" href="visualization_humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="visualization_cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="visualization_windspeed.html">Wind Speed</a>
+                        </div>
+                      </li>
               </ul>
-                  <!-- <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                  </form> -->
-          </div>
-    </nav>
-    <div class="row">
-        <div class="jumbotron col-md-6" style="margin:0 auto;">
-            <h1 class="display-4">Latitude vs.X </h1>
-            <hr class="my-4">
-            <p class="lead">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, I  used NumPy to randomly generate two number as geo-coordinates and used these randomly generated geo-coordinates to search for the nearby city by using the city.py module, as well as to extract the nearby city's country code and the exact geo-coordinates. Then I pulled weather information for each city by using their geo-coordinates from openweathermap.org API. In this way, I extracted weather information for >500 unique cities. Then I made a pandas data frame from the extracted weather information, used Matplotlib to plot the value of maximum temperature, humidity %, cloudiness % and wind speed of each of these >500 cities against its latitude and draw some interesting observations.</p>   
-                          <!-- <hr class="my-4">
-                          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                          <p class="lead">
-                          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                          </p> -->
-        </div>
-                              
-      <div class="jumbotron col-md-6" style="margin:0 auto;">
-      
-          <h1 class="display-4">Visualization </h1>
-            <!--add a line -->
-          <hr class="my-4">
+            </div>
+          </nav>
+          <div class="row">
+                <div class="jumbotron col-md-6" style="margin:0 auto;">
+                    <h1 class="display-4">Latitude vs.X </h1>
+                    <hr class="my-4">
+                    <p class="lead">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, I  used NumPy to randomly generate two number as geo-coordinates and used these randomly generated geo-coordinates to search for the nearby city by using the city.py module, as well as to extract the nearby city's country code and the exact geo-coordinates. Then I pulled weather information for each city by using their geo-coordinates from openweathermap.org API. In this way, I extracted weather information for >500 unique cities. Then I made a pandas data frame from the extracted weather information, used Matplotlib to plot the value of maximum temperature, humidity %, cloudiness % and wind speed of each of these >500 cities against its latitude and draw some interesting observations.</p>   
+                                  <!-- <hr class="my-4">
+                                  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                                  <p class="lead">
+                                  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                                  </p> -->
+                </div>
+                                      
+              <div class="jumbotron col-md-6" style="margin:0 auto;">
+              
+                  <h1 class="display-4">Visualization </h1>
+                    <!--add a line -->
+                  <hr class="my-4">
+        
+                  <div class='row'>
+        
+                    <div class="card border-success mb-3 col-md-6" style="max-width: 20rem;">
+                      <div class="card-header">Latitude vs. Max Temperature</div>
+                      <a href="visualization_temp.html"><img style="height: 200px; width: 100%; display: block;" src="max_temp.png" alt="Max Temperature vs. latitude"></a>
+                    </div>
+              
+                    <div class="card border-success mb-3 col-md-6" style="max-width: 20rem;">
+                      <div class="card-header">Latitude vs. Humidity</div>
+                      <a href="visualization_humidity.html"><img style="height: 200px; width: 100%; display: block;" src="Humidity.png" alt="Humidity vs. latitude"></a>    
+                    </div>
+              
+                  </div>
+              
+                  <div class='row'>
+              
+                    <div class="card border-success mb-3 col-md-6" style="max-width: 20rem;">
+                        <div class="card-header">Latitude vs. Cloudiness</div>
+                        <a href="visualization_cloudiness.html"><img style="height: 200px; width: 100%; display: block;" src="Cloudiness.png" alt="cloudiness vs. latitude"></a>           
+                    </div>
+              
+                    <div class="card border-success mb-3 col-md-6" style="max-width: 20rem;">
+                          <div class="card-header">Latitude vs. Wind Speed</div>
+                          <a href="visualization_windspeed.html"><img style="height: 200px; width: 100%; display: block;" src="wind_speed.png" alt="wind_speed vs. latitude"></a>             
+                    </div>
+              
+                  </div>
+                          
+              </div>
+            </div>
 
-          <div class='row'>
-
-            <div class="card border-success mb-3 col-md-6" style="max-width: 20rem;">
-              <div class="card-header">Latitude vs. Max Temperature</div>
-              <a href="visualization_temp.html"><img style="height: 200px; width: 100%; display: block;" src="max_temp.png" alt="Max Temperature vs. latitude"></a>
-            </div>
-      
-            <div class="card border-success mb-3 col-md-6" style="max-width: 20rem;">
-              <div class="card-header">Latitude vs. Humidity</div>
-              <a href="visualization_humidity.html"><img style="height: 200px; width: 100%; display: block;" src="Humidity.png" alt="Humidity vs. latitude"></a>    
-            </div>
-      
-          </div>
-      
-          <div class='row'>
-      
-            <div class="card border-success mb-3 col-md-6" style="max-width: 20rem;">
-                <div class="card-header">Latitude vs. Cloudiness</div>
-                <a href="visualization_cloudiness.html"><img style="height: 200px; width: 100%; display: block;" src="Cloudiness.png" alt="cloudiness vs. latitude"></a>           
-            </div>
-      
-            <div class="card border-success mb-3 col-md-6" style="max-width: 20rem;">
-                  <div class="card-header">Latitude vs. Wind Speed</div>
-                  <a href="visualization_windspeed.html"><img style="height: 200px; width: 100%; display: block;" src="wind_speed.png" alt="wind_speed vs. latitude"></a>             
-            </div>
-      
-          </div>
-                  
-      </div>
-    </div>
-    
-    
 </body>
 </html>
